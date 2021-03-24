@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<Pane fx:controller="noi.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#Ten" layoutX="243.0" layoutY="94.0"
+              mnemonicParsing="false" text="danh sach ten" />
+      <Button onAction="#Tuoi" layoutX="243.0" layoutY="210.0" mnemonicParsing="false"
+              prefHeight="27.0" prefWidth="94.0" text="diem  thi" />
+   </children>
+</Pane>
