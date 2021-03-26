@@ -5,10 +5,12 @@
 
 <Pane fx:controller="managestudent.themmoi.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Button onAction="#danhsach" layoutX="26.0" layoutY="24.0" mnemonicParsing="false" text="danhsach" />
       <TextField fx:id="inName" layoutX="14.0" layoutY="49.0" promptText="Ten sv" />
       <TextField fx:id="inAge" layoutX="14.0" layoutY="105.0" promptText="Tuoi" />
       <TextField fx:id="inMark" layoutX="14.0" layoutY="173.0" promptText="diem" />
       <Button onAction="#add" layoutX="28.0" layoutY="237.0" mnemonicParsing="false" text="Button" />
       <Button onAction="#trangchu" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
+
    </children>
 </Pane>

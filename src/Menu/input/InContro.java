@@ -1,35 +1,29 @@
-package managestudent.themmoi;
+package Menu.input;
 
+import Menu.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import managestudent.Main;
 
 import java.io.*;
 import java.util.ArrayList;
 
-
-public class Controller  {
+public class InContro {
     public TextField inName;
     public TextField inAge;
     public TextField inMark;
-    public void trangchu() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../home/home.fxml"));
-        Main.mainStage.setScene(new Scene(root,600,400));
-    }
-    public void add(){
+    public void Add(){
         try {
-            FileInputStream fis = new FileInputStream("quang");
+            FileInputStream fis = new FileInputStream("quang2");
             DataInputStream dis = new DataInputStream(fis);
-
             String txt = dis.readLine();
             ArrayList<String> ar =new ArrayList<>();
             while (txt !=null){
                 ar.add(txt);
                 txt=dis.readLine();
             }
-            FileOutputStream fos = new FileOutputStream("quang");
+            FileOutputStream fos = new FileOutputStream("quang2");
             DataOutputStream dos = new DataOutputStream(fos);
             if (!inName.getText().isEmpty()){
                 ar.add(inName.getText());
@@ -47,8 +41,16 @@ public class Controller  {
         }
     }
 
-    public void danhsach() throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../danhsach/danhsach.fxml"));
+
+    public void Home() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("../Contro/Contro.fxml"));
         Main.mainStage.setScene(new Scene(root,600,400));
     }
+    public void Danhsach() throws  IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("../ouput/Ouput.fxml"));
+        Main.mainStage.setScene(new Scene(root,600,400));
+    }
+
+
+
 }

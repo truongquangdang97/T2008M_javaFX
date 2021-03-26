@@ -20,24 +20,24 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
     public TableView <SinhVien> tbview;
-    public TableColumn<SinhVien,SinhVien> txtName;
-    public TableColumn<SinhVien,SinhVien> txtAge;
-    public TableColumn<SinhVien,SinhVien> txtMark;
+    public TableColumn<SinhVien,String> txtName;
+    public TableColumn<SinhVien,Integer> txtAge;
+    public TableColumn<SinhVien,Integer> txtMark;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        txtName.setCellValueFactory(new PropertyValueFactory<SinhVien,SinhVien>("name"));
-        txtAge.setCellValueFactory(new PropertyValueFactory<SinhVien,SinhVien>("age"));
-        txtMark.setCellValueFactory(new PropertyValueFactory<SinhVien,SinhVien>("mark"));
+        txtName.setCellValueFactory(new PropertyValueFactory<SinhVien,String>("name"));
+        txtAge.setCellValueFactory(new PropertyValueFactory<SinhVien,Integer>("age"));
+        txtMark.setCellValueFactory(new PropertyValueFactory<SinhVien,Integer>("mark"));
+
         ObservableList<SinhVien> ds = FXCollections.observableArrayList();
+
         try {
-            FileInputStream fis = new FileInputStream("studen.bin");
+            FileInputStream fis = new FileInputStream("quang");
             DataInputStream dis = new DataInputStream(fis);
-
-
             int line =0;
-            String txt = dis.readLine();
-            String[] str = new String[3];
+            String txt = dis.readLine();//lấy dòng
+            String[] str = new String[3];//mang string có 3 phần tử .
             while (txt!=null){
                 str[line] = txt;
                 line++;
@@ -46,7 +46,6 @@ public class Controller implements Initializable {
                     SinhVien sv = new SinhVien(str[0],Integer.parseInt(str[1]),Integer.parseInt(str[2]));
                     ds.add(sv);
                     line=0;
-
                 }
             }
             tbview.setItems(ds);

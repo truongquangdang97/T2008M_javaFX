@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="Menu.input.InContro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="inName" layoutX="195.0" layoutY="37.0" promptText="Ten" />
+      <TextField fx:id="inAge" layoutX="195.0" layoutY="85.0" promptText="tuoi" />
+      <TextField fx:id="inMark" layoutX="195.0" layoutY="136.0" promptText="Diem" />
+      <Button onAction="#Add" layoutX="431.0" layoutY="91.0" mnemonicParsing="false" text="Add" />
+      <Button onAction="#Home" layoutX="14.0" layoutY="24.0" mnemonicParsing="false" text="Home" />
+      <Button onAction="#Danhsach" layoutX="224.0" layoutY="227.0" mnemonicParsing="false" text="Danh sach" />
+   </children>
+</Pane>

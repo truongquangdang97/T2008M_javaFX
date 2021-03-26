@@ -1,4 +1,4 @@
-package lan3;
+package Cainayhay;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
