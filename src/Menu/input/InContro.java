@@ -17,6 +17,7 @@ public class InContro {
         try {
             FileInputStream fis = new FileInputStream("quang2");
             DataInputStream dis = new DataInputStream(fis);
+
             String txt = dis.readLine();
             ArrayList<String> ar =new ArrayList<>();
             while (txt !=null){

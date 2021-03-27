@@ -42,6 +42,8 @@ public class OuContro implements Initializable{
             FileInputStream fis=new FileInputStream("quang2");
             DataInputStream dis= new DataInputStream(fis);
 
+
+
             int line =0;
             String[] ar = new String[3];
             String txt = dis.readLine();//lay tung dong ////khi gap \n thi moi dung
