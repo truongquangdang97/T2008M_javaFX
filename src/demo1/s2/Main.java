@@ -1,5 +1,5 @@
 
-package demo.s2;
+package demo1.s2;
 
 import java.util.ArrayList;
 

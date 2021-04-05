@@ -1,16 +1,32 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:controller="managestudent.themmoi.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Button onAction="#danhsach" layoutX="26.0" layoutY="24.0" mnemonicParsing="false" text="danhsach" />
-      <TextField fx:id="inName" layoutX="14.0" layoutY="49.0" promptText="Ten sv" />
-      <TextField fx:id="inAge" layoutX="14.0" layoutY="105.0" promptText="Tuoi" />
-      <TextField fx:id="inMark" layoutX="14.0" layoutY="173.0" promptText="diem" />
-      <Button onAction="#add" layoutX="28.0" layoutY="237.0" mnemonicParsing="false" text="Button" />
-      <Button onAction="#trangchu" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" text="Back" />
-
+      <TextField layoutX="135.0" layoutY="86.0" prefHeight="46.0" prefWidth="330.0" promptText="Ten Sinh vien">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="135.0" layoutY="154.0" prefHeight="46.0" prefWidth="330.0" promptText="Nhap tuoi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField layoutX="135.0" layoutY="217.0" prefHeight="46.0" prefWidth="330.0" promptText="Diem thi">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button layoutX="135.0" layoutY="298.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="142.0" text="Submit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="29.0" layoutY="20.0" mnemonicParsing="false" text="Trang chu" />
    </children>
 </Pane>

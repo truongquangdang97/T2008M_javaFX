@@ -1,4 +1,4 @@
-package managestudent;
+package product;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,18 +7,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
-    public static void main(String[] args) {
-        launch(args);
-    }
-
     public static Stage mainStage;
     @Override
     public void start(Stage primaryStage) throws Exception{
         mainStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("home/home.fxml"));
-        primaryStage.setTitle("Quản lý sinh viên...");
+        Parent root = FXMLLoader.load(getClass().getResource("Home/home.fxml"));
+        primaryStage.setTitle("Home");
         primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
+    }
+
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }

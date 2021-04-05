@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView layoutX="18.0" layoutY="89.0" prefHeight="291.0" prefWidth="563.0" style="-fx-border-color: orange;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="289.0" text="Name" />
+            <TableColumn prefWidth="109.0" text="Price" />
+            <TableColumn prefWidth="86.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Button layoutX="18.0" layoutY="49.0" mnemonicParsing="false" style="-fx-background-color: gray;" text="Back" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="312.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: skyblue;" text="Output" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="243.0" layoutY="391.0" mnemonicParsing="false" style="-fx-background-color: skyblue;" text="Input" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Text fill="ORANGE" layoutX="210.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Product">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

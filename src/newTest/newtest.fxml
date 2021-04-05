@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="newTest.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="name" layoutX="40.0" layoutY="32.0" promptText="ten" />
+      <TextField fx:id="hight" layoutX="40.0" layoutY="81.0" promptText="chieu cao " />
+      <TextField fx:id="big" layoutX="40.0" layoutY="139.0" promptText="can nang" />
+      <Button onAction="#add" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" text="Add" />
+      <Button layoutX="40.0" layoutY="250.0" mnemonicParsing="false" text="up" />
+      <Button layoutX="40.0" layoutY="295.0" mnemonicParsing="false" text="Down" />
+      <TableView fx:id="bangao" layoutX="224.0" layoutY="32.0" prefHeight="200.0" prefWidth="349.0">
+        <columns>
+          <TableColumn fx:id="tenao" prefWidth="127.0" text="Ten" />
+          <TableColumn fx:id="chieucaoao" prefWidth="135.0" text="Chieu cao " />
+            <TableColumn fx:id="cannangao" prefWidth="86.0" text="can nang " />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

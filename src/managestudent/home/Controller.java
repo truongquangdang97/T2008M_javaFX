@@ -6,13 +6,12 @@ import javafx.scene.Scene;
 import managestudent.Main;
 
 public class Controller {
-    public void themsv() throws  Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../themmoi/themsv.fxml"));
-        Main.mainStage.setScene(new Scene(root,600,400));
-    }
     public void danhsach() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../danhsach/danhsach.fxml"));
         Main.mainStage.setScene(new Scene(root,600,400));
     }
 
+    public void themSV(){
+
+    }
 }

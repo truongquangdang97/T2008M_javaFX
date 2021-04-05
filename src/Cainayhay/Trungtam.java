@@ -14,7 +14,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.ResourceBundle;
 
-public class Trungtam implements Initializable {
+public class Trungtam implements Initializable  {
     public TextField namethat;
     public TextField hightthat;
     public TextField bigthat;
@@ -25,7 +25,6 @@ public class Trungtam implements Initializable {
     public TableColumn<Nguoi,Double> cannanggia;
     public Text ok;
 
-    ObservableList<Nguoi> bangthat= FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,25 +32,60 @@ public class Trungtam implements Initializable {
         chieucaogia.setCellValueFactory(new PropertyValueFactory<Nguoi,Integer>("chieucao"));
         cannanggia.setCellValueFactory(new PropertyValueFactory<Nguoi,Double>("cannang"));
     }
+    ObservableList<Nguoi> bangthat= FXCollections.observableArrayList();
+
 
     public void input(){
         try {
-            String a= namethat.getText();
-            Integer b = Integer.valueOf(hightthat.getText());
+            String a = namethat.getText();
+            Integer b = Integer.parseInt(hightthat.getText());
             double c = Double.parseDouble(bigthat.getText());
             if (!a.isEmpty()){
-                bangthat.add(new Nguoi(a,b,c));
+                bangthat.add(new  Nguoi(a,b,c));
                 namethat.setText("");
                 hightthat.setText("");
                 bigthat.setText("");
-                alert.setText("");
                 bangao.setItems(bangthat);
             }
-            alert.setText("thu lai ");
-            alert.setDisable(false);
-        }catch (Exception e){}
-        alert.setText("thu lai ");
-        alert.setDisable(false);
+        }catch (Exception e){
+            alert.setText("tu lai");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        try {
+//            String a= namethat.getText();
+//            Integer b = Integer.valueOf(hightthat.getText());
+//            double c = Double.parseDouble(bigthat.getText());
+//            if (!a.isEmpty()){
+//                bangthat.add(new Nguoi(a,b,c));
+//                namethat.setText("");
+//                hightthat.setText("");
+//                bigthat.setText("");
+//                alert.setText("");
+//                bangao.setItems(bangthat);
+//            }
+//            alert.setText("thu lai ");
+//            alert.setDisable(false);
+//        }catch (Exception e){}
+//        alert.setText("thu lai ");
+//        alert.setDisable(false);
     }
 
 

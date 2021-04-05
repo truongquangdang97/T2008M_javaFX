@@ -1,4 +1,4 @@
-package Menu.ouput;
+package ouput;
 
 import Menu.Main;
 import Menu.model.SinhVien;
@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class OuContro implements Initializable{
+public class ShowContro implements Initializable{
     public void Home() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../Contro/Contro.fxml"));
         Main.mainStage.setScene(new Scene(root,600,400));
@@ -39,15 +39,13 @@ public class OuContro implements Initializable{
         Age.setCellValueFactory(new PropertyValueFactory<SinhVien,Integer>("Age"));
         Mark.setCellValueFactory(new PropertyValueFactory<SinhVien,Integer>("Mark"));
         try{
-            FileInputStream fis=new FileInputStream("quang2");
+            //lấy dữ liệu từ quang2. để in ra .input
+            FileInputStream fis=new FileInputStream("vidu");
             DataInputStream dis= new DataInputStream(fis);
-
-
-
             int line =0;
             String[] ar = new String[3];
             String txt = dis.readLine();//lay tung dong ////khi gap \n thi moi dung
-            while (txt!=null){
+              while (txt!=null){
                 ar[line] = txt;
                 line++;
                 txt= dis.readLine();

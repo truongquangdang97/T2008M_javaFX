@@ -1,4 +1,4 @@
-package demo.s2;
+package demo1.s2;
 
 public class Actor<E> {
     E id;

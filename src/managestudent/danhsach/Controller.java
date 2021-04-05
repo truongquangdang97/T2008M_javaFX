@@ -10,16 +10,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import managestudent.Main;
-import managestudent.model.SinhVien;
-
-import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
+import models.entity.SinhVien;
+import models.ModelSinhVien;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 public class Controller implements Initializable {
-    public TableView <SinhVien> tbview;
+    public TableView<SinhVien> tbview;
     public TableColumn<SinhVien,String> txtName;
     public TableColumn<SinhVien,Integer> txtAge;
     public TableColumn<SinhVien,Integer> txtMark;
@@ -31,32 +27,25 @@ public class Controller implements Initializable {
         txtMark.setCellValueFactory(new PropertyValueFactory<SinhVien,Integer>("mark"));
 
         ObservableList<SinhVien> ds = FXCollections.observableArrayList();
+        // lay tu db
+        ModelSinhVien modelSinhVien = new ModelSinhVien();
+        ds.addAll(modelSinhVien.getListWithSort("mark","desc"));
 
-        try {
-            FileInputStream fis = new FileInputStream("quang");
-            DataInputStream dis = new DataInputStream(fis);
-            int line =0;
-            String txt = dis.readLine();//lấy dòng
-            String[] str = new String[3];//mang string có 3 phần tử .
-            while (txt!=null){
-                str[line] = txt;
-                line++;
-                txt= dis.readLine();
-                if (line>=3){
-                    SinhVien sv = new SinhVien(str[0],Integer.parseInt(str[1]),Integer.parseInt(str[2]));
-                    ds.add(sv);
-                    line=0;
-                }
-            }
-            tbview.setItems(ds);
-        }catch (IOException io){
-            System.out.println("");
-        }
+        tbview.setItems(ds);
     }
 
-    public void trangchu() throws Exception{
+    public void trangChu() throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../home/home.fxml"));
         Main.mainStage.setScene(new Scene(root,600,400));
     }
 
+    public void submitThemMoi(){
+        ModelSinhVien modelSinhVien = new ModelSinhVien();
+        SinhVien ss = new SinhVien(null,"Lê Đức Minh",19,5);// sv tao ra tu lay du lieu cua form
+        if(modelSinhVien.create(ss)){
+            System.out.println("Them moi thanh cong");
+        }else {
+            System.out.println("Them sv that bai");
+        }
+    }
 }

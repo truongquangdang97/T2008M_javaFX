@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.layout.*?>
+<Pane fx:controller="product.InputProduct.InputController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: whitesmoke;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fill="ORANGE" layoutX="199.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Input Product">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField layoutX="168.0" layoutY="113.0" prefHeight="42.0" prefWidth="264.0" />
+      <TextField layoutX="168.0" layoutY="180.0" prefHeight="42.0" prefWidth="264.0" />
+      <TextField layoutX="168.0" layoutY="243.0" prefHeight="42.0" prefWidth="264.0" />
+      <Text layoutX="80.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="54.28955078125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price:" wrappingWidth="54.28955078125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="78.0" layoutY="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" wrappingWidth="66.7568359375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" style="-fx-background-color: gray;" text="Back" textFill="WHITE" />
+      <Button layoutX="207.0" layoutY="317.0" mnemonicParsing="false" style="-fx-background-color: skyblue;" text="Input" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="300.0" layoutY="317.0" mnemonicParsing="false" style="-fx-background-color: skyblue;" text="List Product" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
